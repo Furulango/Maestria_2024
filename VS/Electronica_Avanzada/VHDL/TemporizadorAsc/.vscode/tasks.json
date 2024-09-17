@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile VHDL",
+            "type": "shell",
+            "command": "ghdl",
+            "args": [
+                "-a",
+                "TemporizadorAsc.vhd",
+                "tb_TemporizadorAsc.vhd"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Elaborate VHDL",
+            "type": "shell",
+            "command": "ghdl",
+            "args": [
+                "-e",
+                "tb_TemporizadorAsc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Simulate VHDL",
+            "type": "shell",
+            "command": "ghdl",
+            "args": [
+                "-r",
+                "tb_TemporizadorAsc",
+                "--vcd=tb_TemporizadorAsc.vcd",
+                "--stop-time=500ns"
+            ],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}

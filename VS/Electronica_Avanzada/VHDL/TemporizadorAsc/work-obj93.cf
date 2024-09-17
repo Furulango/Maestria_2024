@@ -1,0 +1,7 @@
+v 4
+file . "tb_TemporizadorAsc.vhd" "37f187bcec7bcd740a4d9ec5b838d4d11e89410d" "20240830004039.433":
+  entity tb_temporizadorasc at 2( 41) + 0 on 17;
+  architecture behavior of tb_temporizadorasc at 9( 165) + 0 on 18;
+file . "TemporizadorAsc.vhd" "20d775ae2e2f7b1fbbe081b5b6f2718ff60925a0" "20240830004039.418":
+  entity temporizadorasc at 6( 121) + 0 on 15;
+  architecture contar of temporizadorasc at 22( 476) + 0 on 16;

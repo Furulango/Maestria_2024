@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "GHDL Compile",
+            "type": "shell",
+            "command": "/usr/bin/ghdl",
+            "args": [
+                "-a",
+                "${workspaceFolder}/contador.vhd"  // Asegúrate de que este archivo esté en tu ruta de trabajo
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "GHDL Elaborate",
+            "type": "shell",
+            "command": "/usr/bin/ghdl",
+            "args": [
+                "-e",
+                "tb_ContDes"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "GHDL Run",
+            "type": "shell",
+            "command": "/usr/bin/ghdl",
+            "args": [
+                "-r",
+                "tb_ContDes",
+                "--vcd=${workspaceFolder}/and_gate_tb.vcd"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

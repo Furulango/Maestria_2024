@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Simular VHDL",
+            "type": "vhdl",
+            "request": "launch",
+            "program": "${workspaceFolder}/tb_TemporizadorAsc",
+            "args": ["--vcd=tb_TemporizadorAsc.vcd", "--stop-time=500ns"]
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Simular VHDL",
+            "type": "vhdl",
+            "request": "launch",
+            "program": "${workspaceFolder}/tb_FSM_encoder_direccion",
+            "args": ["--vcd=tb_FSM_encoder_direccion.vcd", "--stop-time=500ns"]
+        }
+    ]
+}
