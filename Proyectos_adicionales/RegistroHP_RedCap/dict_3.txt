@@ -1,0 +1,745 @@
+data_dictionary_part_3 = {
+    "disnea_seg": {
+        "label": "Disnea en el seguimiento",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "dolor_tor_cico_seg": {
+        "label": "Dolor torácico en el seguimiento",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "sincope_seg": {
+        "label": "Síncope en el seguimiento",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "comorbilidades_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {0: "Incomplete", 1: "Unverified", 2: "Complete"}
+    },
+    "clasefuncionalmedicion": {
+        "label": "Fecha clase funcional",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "clasefuncionalmedicion_valor": {
+        "label": "Valor clase funcional",
+        "type": "text",
+        "validation": {"min": 1, "max": 4}
+    },
+    "cfnyha_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {0: "Incomplete", 1: "Unverified", 2: "Complete"}
+    },
+    "test_marcha_1": {
+        "label": "Test de marcha",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "fecha_marcha": {
+        "label": "Fecha de test de marcha",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "fio2_marcha": {
+        "label": "FIO2 marcha",
+        "type": "text",
+        "validation": "number"
+    },
+    "spo2_inicial": {
+        "label": "Saturación de oxígeno inicial",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_basal": {
+        "label": "Frecuencia cardiaca basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_basal_pred": {
+        "label": "Frecuencia cardiaca basal expresada en % del valor predicho",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_max": {
+        "label": "Frecuencia cardiaca máxima alcanzada",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_max_pred": {
+        "label": "Frecuencia cardiaca máxima expresada en % del valor predicho",
+        "type": "text",
+        "validation": "number"
+    },
+    "spo2_min": {
+        "label": "Saturación de oxígeno mínima",
+        "type": "text"
+    },
+    "distancia_mts": {
+        "label": "Distancia final recorrida en metros",
+        "type": "text",
+        "validation": "number"
+    },
+    "distancia_mts_predicha": {
+        "label": "Distancia en metros predicha según la condición del paciente",
+        "type": "text",
+        "validation": "number"
+    },
+    "porcentaje_distancia_predicha": {
+        "label": "Distancia final recorrida en metros, expresada en % del predicho para ese paciente",
+        "type": "text"
+    },
+    "sintomas": {
+        "label": "Síntomas presentados durante el test",
+        "type": "checkbox",
+        "options": {
+            1: "Disnea",
+            2: "Molestia en piernas",
+            3: "Dolor torácico",
+            4: "Lipotimia",
+            5: "Fatiga",
+            6: "Mixto"
+        }
+    },
+    "pecp_1": {
+        "label": "Prueba de esfuerzo cardiopulmonar",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "fecha_pecp": {
+        "label": "Fecha de prueba de esfuerzo cardiopulmonar",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "fevi_ml": {
+        "label": "Volumen expiratorio forzado en el primer minuto en mililitros",
+        "type": "text",
+        "validation": "number"
+    },
+    "fev1_pred": {
+        "label": "Porcentaje de volumen expiratorio forzado en el primer minuto",
+        "type": "text",
+        "validation": "number"
+    },
+    "carga_maxima_tolerada_watts": {
+        "label": "Carga máxima tolerada en Watts",
+        "type": "text",
+        "validation": "number"
+    },
+    "carga_maxima_tolerada_pred": {
+        "label": "Porcentaje de carga máxima tolerada predicho",
+        "type": "text"
+    },
+    "spo2_inicial": {
+        "label": "Saturación de oxígeno inicial",
+        "type": "text",
+        "validation": "number"
+    },
+    "spo2_final": {
+        "label": "Saturación de oxígeno final",
+        "type": "text",
+        "validation": "number"
+    },
+    "sao2_ejercicio_pico": {
+        "label": "Saturación de oxígeno en ejercicio pico",
+        "type": "text",
+        "validation": "number"
+    },
+    "spo2_alta": {
+        "label": "Saturación de oxígeno al final de la prueba",
+        "type": "text",
+        "validation": "number"
+    },
+    "cambio_spo2": {
+        "label": "% de cambio en la saturación inicial vs saturación final",
+        "type": "text",
+        "validation": "number"
+    },
+    "vo2max_mlkgmin": {
+        "label": "Consumo de oxígeno máximo (máxima capacidad aeróbica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "vo2max_ref": {
+        "label": "Porcentaje de consumo de oxígeno máximo (máxima capacidad aeróbica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_basal2": {
+        "label": "Frecuencia cardiaca basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "fcbasal_porcentaje": {
+        "label": "Porcentaje de frecuencia cardiaca basal predicho",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_maxima": {
+        "label": "Frecuencia cardiaca máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_max_porcentaje": {
+        "label": "Porcentaje de frecuencia cardiaca máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "pulsoo2_pico": {
+        "label": "Pulso de oxígeno pico",
+        "type": "text",
+        "validation": "number"
+    },
+    "pulsoo2_pico_porcentaje": {
+        "label": "Porcentaje de pulso de oxígeno pico",
+        "type": "text"
+    },
+    "rta_crono_maxref": {
+        "label": "Porcentaje de respuesta cronotrópica máxima de referencia",
+        "type": "text",
+        "validation": "number"
+    },
+    "rq_final": {
+        "label": "RQ final",
+        "type": "text",
+        "validation": "number"
+    },
+    "rq_pico": {
+        "label": "RQ pico",
+        "type": "text"
+    },
+    "vemax_lmin": {
+        "label": "Ventilación máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "vemax_porcentajevvm": {
+        "label": "Porcentaje de ventilación máxima comparada con la VVM",
+        "type": "text",
+        "validation": "number"
+    },
+    "vvm_lmin": {
+        "label": "Ventilación voluntaria máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "vvm_ref": {
+        "label": "Porcentaje de ventilación voluntaria máxima predicho",
+        "type": "text"
+    },
+    "umbral_lactico": {
+        "label": "Umbral láctico",
+        "type": "text",
+        "validation": "number"
+    },
+    "umbral_lactico_porcentaje": {
+        "label": "Porcentaje de umbral láctico",
+        "type": "text"
+    },
+    "equivalente_ventilatorio_co2": {
+        "label": "Medida indirecta de la eficiencia respiratoria",
+        "type": "text",
+        "validation": "number"
+    },
+    "tas_basal": {
+        "label": "Tensión arterial sistólica basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "tad_basal": {
+        "label": "Tensión arterial diastólica basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "tas_max": {
+        "label": "Tensión arterial sistólica máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "tad_max": {
+        "label": "Tensión arterial diastólica máxima",
+        "type": "text",
+        "validation": "number"
+    },
+    "disnea_basal": {
+        "label": "Disnea basal (escala analógica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "disnea_final": {
+        "label": "Disnea final (escala analógica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "molest_piernas_inicial": {
+        "label": "Molestia en piernas inicial (escala analógica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "molest_piernas_final": {
+        "label": "Molestia en piernas final (escala analógica)",
+        "type": "text",
+        "validation": "number"
+    },
+    "motivo_finalizacion": {
+        "label": "Motivo de finalización de la prueba",
+        "type": "radio",
+        "options": {1: "Síntomas del paciente", 2: "Disnea", 3: "Molestias en piernas"}
+    },
+    "sintoma_predominante": {
+        "label": "Síntoma predominante",
+        "type": "radio",
+        "options": {1: "Disnea", 2: "Molestia en piernas", 3: "Mixto"}
+    },
+    "eficacia_metabolica": {
+        "label": "Eficacia metabólica",
+        "type": "text",
+        "validation": "number"
+    },
+    "test_de_marcha_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {0: "Incomplete", 1: "Unverified", 2: "Complete"}
+    },
+    "lactato_basal": {
+        "label": "Lactato basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "sao2_basal": {
+        "label": "Sao2 basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "po2_basal": {
+        "label": "PO2 basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "pco2_basal": {
+        "label": "PCO2 basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "ph_basal": {
+        "label": "pH basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "fio2_basal": {
+        "label": "FIO2 basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "fecha_gasometria": {
+        "label": "Fecha gasometría",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "hco3_v_basal": {
+        "label": "HCO3 venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "eb_v_basal": {
+        "label": "EB venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "lactato_v_basal": {
+        "label": "Lactato venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "sao2_v_basal": {
+        "label": "SaO2 venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "po2_v_basal": {
+        "label": "PO2 venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "pco2_v_basal": {
+        "label": "PCO2 venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "ph_v_basal": {
+        "label": "pH venoso basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "fio2_v_basal": {
+        "label": "FIO2 venoso basal",
+        "type": "text",
+        "validation": "number"
+    }
+}
+##Add to ;
+data_dictionary_iloprost = {
+    "hco3_a_basal": {
+        "label": "HCO3 basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "eb_a_basal": {
+        "label": "EB basal",
+        "type": "text",
+        "validation": "number"
+    },
+    "lactato_a_iloprost": {
+        "label": "Lactato iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "hco3_a_iloprost": {
+        "label": "HCO3 iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "eb_a_iloprost": {
+        "label": "EB iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "sao2_a_iloprost": {
+        "label": "SaO2 iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "po2_a_iloprost": {
+        "label": "po2 iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "pco2_a_iloprost": {
+        "label": "pCO2 iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "ph_a_iloprost": {
+        "label": "pH arterial iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "fio2_a_iloprost": {
+        "label": "Fio2 arterial iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "hco3_v_iloprost": {
+        "label": "HCO3 venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "eb_v_iloprost": {
+        "label": "EB venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "lactato_v_iloprost": {
+        "label": "Lactato venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "sao2_v_iloprost": {
+        "label": "SaO2 venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "po2_v_iloprost": {
+        "label": "po2 venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "pco2_v_iloprost": {
+        "label": "pCO2 venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "ph_v_iloprost": {
+        "label": "pH venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "fio2_v_iloprost": {
+        "label": "Fio2 venoso iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "sangre_arterial": {
+        "label": "Gasometría",
+        "type": "descriptive"
+    },
+    "cco2": {
+        "label": "CcO2",
+        "type": "calc",
+        "formula": "(1.34*[hb])+([pao2]*0.0031)"
+    },
+    "cvo2_iloprost": {
+        "label": "CvO2 Iloprost",
+        "type": "calc",
+        "formula": "1.34*[hb]*([sao2_v_iloprost]/100)"
+    },
+    "cvo2": {
+        "label": "CvO2",
+        "type": "calc",
+        "formula": "1.34*[hb]*([sao2_v_basal]/100)"
+    },
+    "cao2_iloprost": {
+        "label": "Cao2 iloprost",
+        "type": "calc",
+        "formula": "1.34*[hb]*([sao2_a_iloprost]/100)"
+    },
+    "cao2": {
+        "label": "CaO2",
+        "type": "calc",
+        "formula": "1.34*[hb]*([sao2_a_basal]/100)"
+    },
+    "pao2_iloprost": {
+        "label": "pao2 iloprost",
+        "type": "calc",
+        "formula": "(536*[fio2_a_iloprost])-([pco2_a_iloprost]/0.8)"
+    },
+    "pao2": {
+        "label": "PAO2",
+        "type": "calc",
+        "formula": "(536*[fio2_a_basal])-([pco2_a_basal]/0.8)"
+    },
+    "qva_qt": {
+        "label": "QVA/QT",
+        "type": "calc",
+        "formula": "(([cco2]-[cao2])/([cco2]-[cvo2]))*100"
+    },
+    "dvaco2_iloprost": {
+        "label": "DvaCO2 Iloprost",
+        "type": "calc",
+        "formula": "[pco2_v_iloprostl]-[pco2_a_iloprost]"
+    },
+    "dvaco2": {
+        "label": "DvaCO2",
+        "type": "calc",
+        "formula": "[pco2_v_basal]-[pco2_a_basal]"
+    },
+    "davo2_iloprost": {
+        "label": "DavO2 Iloprost",
+        "type": "calc",
+        "formula": "[cao2_iloprost]-[cvo2_iloprost]"
+    },
+    "davo2": {
+        "label": "DavO2",
+        "type": "calc",
+        "formula": "[cao2]-[cvo2]"
+    },
+    "cco2_iloprost": {
+        "label": "CcO2 Iloprost",
+        "type": "calc",
+        "formula": "(1.34*[hb])+([pao2_iloprost]*0.0031)"
+    },
+    "gc_fick_basal": {
+        "label": "GC FICK",
+        "type": "calc",
+        "formula": "([vo2]/([cao2]-[cvo2]))/10"
+    },
+    "vo2": {
+        "label": "VO2",
+        "type": "calc",
+        "formula": "2.4*[peso]"
+    },
+    "qva_qt_iloprost": {
+        "label": "QVA/QT Iloprost",
+        "type": "calc",
+        "formula": "(([cco2_iloprost]-[cao2_iloprost])/([cco2_iloprost]-[cvo2_iloprost]))*100"
+    },
+    "gc_fick_iloprst": {
+        "label": "GC FICK Iloprst",
+        "type": "calc",
+        "formula": "([vo2]/([cao2_iloprost]-[cvo2_iloprost]))/10"
+    },
+    "pre_cate": {
+        "label": "PAO2",
+        "type": "descriptive"
+    },
+    "rs_iloprost": {
+        "label": "Rs Iloprost",
+        "type": "calc",
+        "formula": "(([pam_iloprost]-[pad_iloprost])/[ic_2_iloprost])"
+    },
+    "rs": {
+        "label": "Rs",
+        "type": "calc",
+        "formula": "(([pam]-[pad])/[ic_2])"
+    },
+    "rp_iloprost": {
+        "label": "Rp Iloprost",
+        "type": "calc",
+        "formula": "([pmap_iloprost]-[poap_iloprost])/[ic_2_iloprost]"
+    },
+    "rp": {
+        "label": "Rp",
+        "type": "calc",
+        "formula": "([pmap]-[poap])/[ic_2]"
+    },
+    "irvs_iloprost": {
+        "label": "IRVS Iloprost",
+        "type": "calc",
+        "formula": "[rvs_iloprost]*[sc]"
+    },
+    "irvs": {
+        "label": "IRVS",
+        "type": "calc",
+        "formula": "[rvs]*[sc]"
+    },
+    "rvs_iloprost": {
+        "label": "RVS Iloprost",
+        "type": "calc",
+        "formula": "(([pam_iloprost]-[pad_iloprost])/[gc_iloprost])*80"
+    },
+    "rvs": {
+        "label": "RVS",
+        "type": "calc",
+        "formula": "(([pam]-[pad])/[gc_2])*80"
+    },
+    "rpt_5_iloprost": {
+        "label": "rpt_5_iloprost",
+        "type": "calc",
+        "formula": "([pmap_iloprost]/[gc_iloprost])*80"
+    },
+    "rpt_5": {
+        "label": "RPT_5",
+        "type": "calc",
+        "formula": "([pmap]/[gc_2])*80"
+    },
+    "pad_iloprost": {
+        "label": "PAD Iloprost",
+        "type": "text"
+    },
+    "pad": {
+        "label": "PAD",
+        "type": "text",
+        "validation": "number"
+    },
+    "pam_iloprost": {
+        "label": "PAM Iloprost",
+        "type": "text"
+    },
+    "pam": {
+        "label": "PAM",
+        "type": "text",
+        "validation": "number"
+    },
+    "poap_iloprost": {
+        "label": "POAP Iloprost",
+        "type": "text"
+    },
+    "papd_iloprost": {
+        "label": "PAPd Iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "paps_iloprost": {
+        "label": "PAPs Iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "irvp_iloprost": {
+        "label": "irvp Iloprost",
+        "type": "calc",
+        "formula": "[sc]*[rvp_3_iloprost]"
+    },
+    "irvp": {
+        "label": "IRVP",
+        "type": "calc",
+        "formula": "[sc]*[rvp_3]"
+    },
+    "auricula_derecha_iloprost": {
+        "label": "Auricula derecha iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "vd_d2_iloprost": {
+        "label": "VD D2 iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "vd_sist_iloprost": {
+        "label": "Ventrículo derecho sistólica iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "tiempo_rc_iloprost": {
+        "label": "Tiempo RC Iloprost",
+        "type": "text"
+    },
+    "tiempo_rc": {
+        "label": "Tiempo RC",
+        "type": "text",
+        "validation": "number"
+    },
+    "complancencia_a_tot_iloprost": {
+        "label": "Complancencia arterial total Iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "complancencia_arterial_tot": {
+        "label": "Complancencia arterial total",
+        "type": "text",
+        "validation": "number"
+    },
+    "gdp_iloprost": {
+        "label": "GDP Iloprost",
+        "type": "calc",
+        "formula": "[papd_iloprost] - [poap_iloprost]"
+    },
+    "gtp_iloprost": {
+        "label": "GTP Iloprost",
+        "type": "calc",
+        "formula": "[pmap_iloprost]- [poap_iloprost]"
+    },
+    "fr_iloprost": {
+        "label": "FR Iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "fr": {
+        "label": "FR",
+        "type": "text",
+        "validation": "number"
+    },
+    "fc_iloprost": {
+        "label": "FC Iloprost",
+        "type": "text"
+    },
+    "fc": {
+        "label": "FC",
+        "type": "text",
+        "validation": "number"
+    },
+    "aorta_media_iloprost": {
+        "label": "Aorta media iloprost",
+        "type": "text"
+    },
+    "aorta_diast_iloprost": {
+        "label": "Aorta diastólica Iloprost",
+        "type": "text",
+        "validation": "number"
+    },
+    "aorta_sist_iloprost": {
+        "label": "Aorta sistólica iloprost",
+        "type": "text"
+    },
+    "vi_d2_iloprost": {
+        "label": "Ventrículo izquierdo D2 Iloprost",
+        "type": "text"
+    },
+    "vi_sist_iloprost": {
+        "label": "Ventrículo izquierdo iloprost",
+        "type": "text",
+        "validation": "number"
+    }
+}

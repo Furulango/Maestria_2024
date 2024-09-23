@@ -1,0 +1,696 @@
+data_dictionary = {
+    "registro_hp": {
+        "id": 268,
+        "form_status": {
+            "precate_complete": "Complete?",
+            "options": {
+                "0": "Incomplete",
+                "1": "Unverified",
+                "2": "Complete"
+            }
+        },
+        "instrument": "Cateterismo (cateterismo)",
+        "identificacion_cate": {
+            "institucion": "INSTITUTO NACIONAL DE ENFERMEDADES RESPIRATORIAS ISMAEL COSÍO VILLEGAS CATETERISMO CARDIACO",
+            "datos_paciente": {
+                "apellido_paterno": "[apellido_paterno]",
+                "apellido_materno": "[apellido_materno]",
+                "nombre": "[nombre]",
+                "expediente": "[expediente]",
+                "sexo": "[sexo]",
+                "fecha_de_nacimiento": "[fecha_de_nacimiento]"
+            },
+            "nombre_completo": "{nombre} {apellido_paterno} {apellido_materno}",
+            "expediente": "{expediente}",
+            "sexo": "{sexo}",
+            "fecha_nacimiento": "{fecha_de_nacimiento}",
+            "procedencia": "{procedencia}",
+            "fecha_cateterismo": "{fecha_cate}",
+            "edad": "{edad_basal}",
+            "alergias": "{alergias}",
+            "tipo_de_alergia": "{que_alergia}",
+            "hora_ingreso_sala": "{hora_ingreso_sala}",
+            "diagnostico": "{diagnostico}",
+            "hora_egreso_sala": "{hora_egreso_sala}",
+            "datos_clinicos": {
+                "peso": "{peso}",
+                "ta_sistolica": "{tas}",
+                "oxigeno": "{litrooxigeno}",
+                "frecuencia_respiratoria": "{frinicio}",
+                "talla": "{talla}",
+                "ta_diastolica": "{tad}",
+                "sato2": "{sato2inicio}",
+                "frecuencia_cardiaca": "{fcinicio}",
+                "imc": "{imc}",
+                "ta_media": "{tam}",
+                "sc": "{sc}",
+                "hb": "{hb}"
+            }
+        },
+        "inicio_del_procedimiento": {
+            "acceso_vascular": "{acceso_vascular}",
+            "tipo_anestesia": "{tipo_anestesia}",
+            "medicamentos_inicio": "{medicamentos_inicio}",
+            "cambio_acceso_venoso": "{cambio_acceso_venoso}",
+            "motivo_cambio_acceso": "{motivo_cambio_venoso}",
+            "metodo": "{metodo}",
+            "descripcion_procedimiento": "{descripcion_procedimiento}"
+        },
+        "basal_vasodilatador": {
+            "auricula_derecha": "{auricula_derecha}",
+            "ventriculo_derecho": {
+                "sistolica": "{vd_sist}",
+                "d2": "{vd_d2}"
+            },
+            "paps": "{paps}",
+            "papd": "{papd}",
+            "pmap": "{pmap}",
+            "pmap_iloprost": "{pmap_iloprost}",
+            "poap": "{poap}",
+            "poap_d2vi": "{poap_d2vi}",
+            "rvp": "{rvp_3}",
+            "gc": "{gc_2}",
+            "ic": "{ic_2}",
+            "sv02": "{sv02}",
+            "vol_sistolico_vd": "{vol_sistolico_vd}",
+            "gtp": "{gtp}",
+            "gdp": "{gdp}",
+            "grupo_hp": "{hp}",
+            "ventriculo_izquierdo": {
+                "sistolica": "{vi_sist}",
+                "d2": "{vi_d2}"
+            },
+            "aorta": {
+                "sistolica": "{aorta_sist}",
+                "diastolica": "{aorta_diast}",
+                "media": "{aorta_media}"
+            }
+        },
+        "coronariografia": "{coronografia}",
+        "conclusiones": "{conclusiones_cate}",
+        "signos_vitales_final": {
+            "ta_sistolica": "{tas_fin}",
+            "ta_diastolica": "{tad_fin}",
+            "ta_media": "{tam_fin}",
+            "fr": "{fr_fin}",
+            "fc": "{fc_fin}",
+            "sato2": "{sao2_fin}"
+        },
+        "medicamentos_utilizados": "{medic_procedimiento}",
+        "indicaciones": "{indicaciones}",
+        "intervencionista": {
+            "1": "{intervencionista}",
+            "2": "{operador}"
+        },
+        "direccion": "Calz. de Tlalpan 4502, Del Tlalpan Col Secc 16, Tlalpan, 14080, CDMX",
+        "sancion": "No. sanción: INER-EC-SCA-05 (08.2024)"
+    },
+    "variables": {
+        "nombre": {
+            "nombre": "Nombre",
+            "type": "text"
+        },
+        "apellido_paterno": {
+            "nombre": "apellido paterno",
+            "type": "text"
+        },
+        "apellido_materno": {
+            "nombre": "apellido materno",
+            "type": "text"
+        },
+        "sexo": {
+            "nombre": "sexo",
+            "type": "radio",
+            "options": {
+                "0": "Mujer",
+                "1": "Hombre"
+            }
+        },
+        "edad_basal": {
+            "nombre": "Edad",
+            "type": "text (number)"
+        },
+        "expediente": {
+            "nombre": "Expediente",
+            "type": "text"
+        },
+        "fecha_cate": {
+            "nombre": "Fecha cate",
+            "type": "text (date_dmy)"
+        },
+        "hora_ingreso_sala": {
+            "nombre": "Hora de ingreso a la sala",
+            "type": "text (time)"
+        },
+        "hora_egreso_sala": {
+            "nombre": "Hora de egreso a la sala",
+            "type": "text (time)"
+        },
+        "diagnostico": {
+            "nombre": "Diagnostico",
+            "type": "text"
+        },
+        "procedencia": {
+            "nombre": "Procedencia",
+            "type": "dropdown",
+            "options": {
+                "1": "Ambulatorio",
+                "2": "Hospitalario"
+            }
+        },
+        "medic_procedimiento": {
+            "nombre": "Medicamentos procedimiento",
+            "type": "notes"
+        },
+        "alergias": {
+            "nombre": "Alergias",
+            "type": "yesno",
+            "options": {
+                "1": "Sí",
+                "0": "No"
+            }
+        },
+        "que_alergia": {
+            "nombre": "En caso de que sí, describir a cuál:",
+            "type": "text (alpha_only)"
+        },
+        "fecha_de_nacimiento": {
+            "nombre": "Fecha de nacimiento",
+            "type": "text (date_dmy)"
+        },
+        "tas": {
+            "nombre": "Tensión arterial sistólica, mmHg",
+            "type": "text (number)"
+        },
+        "tad": {
+            "nombre": "Tensión arterial diastólica, mmHg",
+            "type": "text (number)"
+        },
+        "tam": {
+            "nombre": "Tensión arterial media calc",
+            "calculo": "([tas]+ 2*([tad]))/3"
+        },
+        "fcinicio": {
+            "nombre": "Frecuencia cardiaca, lpm",
+            "type": "text (number)"
+        },
+        "frinicio": {
+            "nombre": "Frecuencia respiratoria, rpm",
+            "type": "text (number)"
+        },
+        "sato2inicio": {
+            "nombre": "Saturación de oxígeno, %",
+            "type": "text (number)"
+        },
+        "litrooxigeno": {
+            "nombre": "Litros de oxígeno",
+            "type": "text (number)"
+        },
+        "acceso_vascular": {
+            "nombre": "Acceso vascular",
+            "type": "checkbox",
+            "options": {
+                "1": "Femoral venoso Derecho",
+                "2": "Femoral venoso Izquierdo",
+                "3": "Femoral Arterial Derecho",
+                "4": "Femoral Arterial Izquierdo",
+                "5": "Radial Arterial Derecho",
+                "6": "Radial Arterial Izquierdo",
+                "7": "Yugular Derecho",
+                "8": "Yugular Izquierdo"
+            }
+        },
+        "cambio_acceso_venoso": {
+            "nombre": "Cambio de acceso venoso",
+            "type": "yesno",
+            "options": {
+                "1": "Sí",
+                "0": "No"
+            }
+        },
+        "motivo_cambio_venoso": {
+            "nombre": "En caso de cambio de acceso. Describa el Motivo:",
+            "type": "text (alpha_only)"
+        },
+        "tipo_anestesia": {
+            "nombre": "Tipo de anestesia",
+            "type": "text"
+        },
+        "medicamentos_inicio": {
+           
+#Add
+{
+    "fields": {
+        "298": {
+            "nombre": "metodo",
+            "etiqueta": "Método",
+            "type": "dropdown",
+            "opciones": {
+                "1": "Método de Fick",
+                "2": "Termodilución",
+                "3": "Ambos"
+            }
+        },
+        "299": {
+            "nombre": "descripcion_procedimiento",
+            "etiqueta": "DESCRIPCIÓN DEL PROCEDIMIENTO",
+            "type": "notes"
+        },
+        "300": {
+            "nombre": "hb",
+            "etiqueta": "Hb",
+            "type": "text",
+            "format": "number"
+        },
+        "301": {
+            "nombre": "talla",
+            "etiqueta": "Talla",
+            "type": "text",
+            "format": "number"
+        },
+        "302": {
+            "nombre": "peso",
+            "etiqueta": "Peso",
+            "type": "text",
+            "format": "number"
+        },
+        "303": {
+            "nombre": "imc",
+            "etiqueta": "IMC",
+            "type": "calc",
+            "formula": "[peso]/([talla])^2"
+        },
+        "304": {
+            "nombre": "sc",
+            "etiqueta": "Superficie corporal",
+            "type": "calc",
+            "formula": "(((talla*100)*peso)/3600)^0.5"
+        },
+        "305": {
+            "nombre": "pmap",
+            "etiqueta": "PMAP",
+            "type": "text",
+            "format": "number"
+        },
+        "306": {
+            "nombre": "pmap_iloprost",
+            "etiqueta": "PMAP Iloprost",
+            "type": "text"
+        },
+        "307": {
+            "nombre": "poap",
+            "etiqueta": "POAP",
+            "type": "text",
+            "format": "number"
+        },
+        "308": {
+            "nombre": "poap_d2vi",
+            "etiqueta": "POAP D2VI",
+            "type": "text"
+        },
+        "309": {
+            "nombre": "gc_2",
+            "etiqueta": "GC",
+            "type": "text",
+            "format": "number"
+        },
+        "310": {
+            "nombre": "gc_iloprost",
+            "etiqueta": "GC Iloprost",
+            "type": "text",
+            "format": "number"
+        },
+        "311": {
+            "nombre": "ic_2",
+            "etiqueta": "IC",
+            "type": "calc",
+            "formula": "[gc_2]/[sc]"
+        },
+        "312": {
+            "nombre": "sv02",
+            "etiqueta": "SV02",
+            "type": "text"
+        },
+        "313": {
+            "nombre": "ic_2_iloprost",
+            "etiqueta": "IC Iloprost",
+            "type": "text",
+            "format": "number"
+        },
+        "314": {
+            "nombre": "rvp_3",
+            "etiqueta": "RVP_3",
+            "type": "calc",
+            "formula": "(([pmap]-[poap])/[gc_2])*80"
+        },
+        "315": {
+            "nombre": "rvp_3_w",
+            "etiqueta": "RVP_3_w",
+            "type": "calc",
+            "formula": "[rvp_3]/80"
+        },
+        "316": {
+            "nombre": "rvp_3_iloprost",
+            "etiqueta": "RVP_3 Iloprost",
+            "type": "calc",
+            "formula": "(([pmap_iloprost]-[poap_iloprost])/[gc_iloprost])*80"
+        },
+        "317": {
+            "nombre": "rvp_3_iloprost_w",
+            "etiqueta": "RVP_3_iloprost_w",
+            "type": "calc",
+            "formula": "[rvp_3_iloprost]/80"
+        },
+        "318": {
+            "nombre": "paps",
+            "etiqueta": "PAPs",
+            "type": "text",
+            "format": "number"
+        },
+        "319": {
+            "nombre": "papd",
+            "etiqueta": "PAPd",
+            "type": "text",
+            "format": "number"
+        },
+        "320": {
+            "nombre": "gtp",
+            "etiqueta": "GTP",
+            "type": "calc",
+            "formula": "[pmap]-[poap]"
+        },
+        "321": {
+            "nombre": "gdp",
+            "etiqueta": "GDP",
+            "type": "calc",
+            "formula": "[papd]-[poap]"
+        },
+        "322": {
+            "nombre": "vol_sistolico_vd",
+            "etiqueta": "Vol Sistólico VD",
+            "type": "text"
+        },
+        "323": {
+            "nombre": "vd_sist",
+            "etiqueta": "Ventriculo derecho sistólica",
+            "type": "text",
+            "format": "number"
+        },
+        "324": {
+            "nombre": "vd_d2",
+            "etiqueta": "VD D2",
+            "type": "text",
+            "format": "number"
+        },
+        "325": {
+            "nombre": "auricula_derecha",
+            "etiqueta": "Auricula derecha",
+            "type": "text"
+        },
+        "326": {
+            "nombre": "vi_sist",
+            "etiqueta": "Ventriculo izquierdo sistólica",
+            "type": "text",
+            "format": "number"
+        },
+        "327": {
+            "nombre": "vi_d2",
+            "etiqueta": "Ventrículo izquierdo D2",
+            "type": "text"
+        },
+        "328": {
+            "nombre": "aorta_sist",
+            "etiqueta": "Aorta sistólica",
+            "type": "text",
+            "format": "number"
+        },
+        "329": {
+            "nombre": "aorta_diast",
+            "etiqueta": "Aorta diastólica",
+            "type": "text",
+            "format": "number"
+        },
+        "330": {
+            "nombre": "aorta_media",
+            "etiqueta": "Aorta media",
+            "type": "text",
+            "format": "number"
+        },
+        "331": {
+            "nombre": "coronografia",
+            "etiqueta": "CORONOGRAFÍA",
+            "type": "notes"
+        },
+        "332": {
+            "nombre": "conclusiones_cate",
+            "etiqueta": "CONCLUSIONES",
+            "type": "notes"
+        },
+        "333": {
+            "nombre": "tas_fin",
+            "etiqueta": "Tensión arterial sistólica, mmHg",
+            "type": "text"
+        },
+        "334": {
+            "nombre": "tad_fin",
+            "etiqueta": "Tensión arterial diastólica, mmHg",
+            "type": "text"
+        },
+        "335": {
+            "nombre": "tam_fin",
+            "etiqueta": "Ta media final",
+            "type": "calc",
+            "formula": "([tas_fin]+ 2*([tad_fin]))/3"
+        },
+        "336": {
+            "nombre": "fr_fin",
+            "etiqueta": "Frecuencia respiratoria",
+            "type": "text",
+            "format": "number"
+        },
+        "337": {
+            "nombre": "fc_fin",
+            "etiqueta": "Frecuencia cardíaca",
+            "type": "text"
+        },
+        "338": {
+            "nombre": "sao2_fin",
+            "etiqueta": "saO2",
+            "type": "text",
+            "format": "number"
+        },
+        "339": {
+            "nombre": "hp",
+            "etiqueta": "HP",
+            "type": "checkbox",
+            "opciones": {
+                "1": "Grupo 1",
+                "2": "Grupo 2",
+                "3": "Grupo 3",
+                "4": "Grupo 4",
+                "5": "Grupo 5",
+                "6": "Sin HP"
+            }
+        },
+        "340": {
+            "nombre": "indicaciones",
+            "etiqueta": "INDICACIONES",
+            "type": "notes"
+        },
+        "341": {
+            "nombre": "intervencionista",
+            "etiqueta": "1º Operador",
+            "type": "dropdown",
+            "opciones": {
+                "1": "Dr Juan José Orozco Gutiérrez. Cédula: 86 31971",
+                "2": "Dr. Oscar Ballesteros Vázquez. Cédula: 11514754",
+                "3": "José Antonio García Cuellar. Cédula:11618218",
+                "4": "Jorge Torres Sánchez. Cédula: 6417808"
+            }
+        },
+        "342": {
+            "nombre": "monitoreo",
+            "etiqueta": "Monitoreo continuo",
+            "type": "checkbox",
+            "opciones": {
+                "1": "Sí"
+            }
+        }
+    }
+}
+##Add
+{
+    "fields": {
+        "342": {
+            "nombre": "operador",
+            "etiqueta": "2º Operador",
+            "type": "dropdown",
+            "opciones": {
+                "1": "Dr Juan José Orozco Gutiérrez. Cédula: 86 31971",
+                "2": "Dr. Oscar Ballesteros Vázquez. Cédula: 11514754",
+                "3": "José Antonio García Cuellar. Cédula: 11618218",
+                "4": "Jorge Torres Sánchez. Cédula: 6417808"
+            }
+        },
+        "343": {
+            "nombre": "cateterismo_complete",
+            "etiqueta": "Complete?",
+            "type": "dropdown",
+            "opciones": {
+                "0": "Incomplete",
+                "1": "Unverified",
+                "2": "Complete"
+            }
+        },
+        "344": {
+            "nombre": "h",
+            "etiqueta": "Texto",
+            "type": "text"
+        },
+        "345": {
+            "nombre": "basura_cate_complete",
+            "etiqueta": "Complete?",
+            "type": "dropdown",
+            "opciones": {
+                "0": "Incomplete",
+                "1": "Unverified",
+                "2": "Complete"
+            }
+        },
+        "346": {
+            "nombre": "bh",
+            "etiqueta": "BIOMETRÍA HEMÁTICA",
+            "type": "descriptive",
+            "fields": {
+                "fecha_bh": "Fecha BH",
+                "leucocitos": "Leucocitos",
+                "neutros_por": "Neutrófilos %",
+                "linfos_por": "Linfocitos %",
+                "monos_por": "Monocitos %",
+                "eosino_por": "Eosinófilos %",
+                "basos_por": "Basófilos %",
+                "neutrofilos": "Neutrófilos #",
+                "linfocitos": "Linfocitos",
+                "monocitos": "Monocitos",
+                "eosinofilos": "Eosinófilos #",
+                "basofilos": "Basófilos #",
+                "eritrocitos": "Eritrocitos",
+                "hemoglobina": "Hemoglobina",
+                "hematocrito": "Hematocrito",
+                "mcv": "MCV",
+                "mch": "MCH",
+                "mchc": "MCHC",
+                "rdw": "RDW",
+                "plaquetas": "Plaquetas",
+                "mpv": "MPV"
+            }
+        },
+        "347": {
+            "nombre": "bilirr_dir",
+            "etiqueta": "Bilirrubina directa",
+            "type": "text",
+            "format": "number"
+        },
+        "348": {
+            "nombre": "bilirrub_total",
+            "etiqueta": "Bilirrubina total",
+            "type": "text",
+            "format": "number"
+        },
+        "349": {
+            "nombre": "alt",
+            "etiqueta": "ALT",
+            "type": "text",
+            "format": "number"
+        },
+        "350": {
+            "nombre": "ast",
+            "etiqueta": "AST",
+            "type": "text",
+            "format": "number"
+        },
+        "351": {
+            "nombre": "fecha_pruebas_hep_tica",
+            "etiqueta": "Fecha pruebas hepática",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "352": {
+            "nombre": "pruebas_hep_ticas",
+            "etiqueta": "PRUEBAS HEPÁTICAS",
+            "type": "text"
+        },
+        "353": {
+            "nombre": "creatinina",
+            "etiqueta": "Creatinina",
+            "type": "text",
+            "format": "number"
+        },
+        "354": {
+            "nombre": "fecha_creatinina",
+            "etiqueta": "Fecha creatinina",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "355": {
+            "nombre": "inr",
+            "etiqueta": "INR",
+            "type": "text",
+            "format": "number"
+        },
+        "356": {
+            "nombre": "tpt",
+            "etiqueta": "TPT",
+            "type": "text",
+            "format": "number"
+        },
+        "357": {
+            "nombre": "tp",
+            "etiqueta": "TP",
+            "type": "text",
+            "format": "number"
+        },
+        "358": {
+            "nombre": "fechapruebascoag",
+            "etiqueta": "Fecha de pruebas de coagulación",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "359": {
+            "nombre": "valorpro_bnp",
+            "etiqueta": "Valor pro_BNP",
+            "type": "text",
+            "format": "number"
+        },
+        "360": {
+            "nombre": "fechapro_bnp",
+            "etiqueta": "FECHA pro-BNP",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "361": {
+            "nombre": "valor_p_ptido_natrirur_tic",
+            "etiqueta": "BNP",
+            "type": "text",
+            "format": "number"
+        },
+        "362": {
+            "nombre": "fecha_bnp",
+            "etiqueta": "Fecha BNP",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "363": {
+            "nombre": "fecha_bh",
+            "etiqueta": "FECHA BH",
+            "type": "text",
+            "format": "date_dmy"
+        },
+        "364": {
+            "nombre": "leucocitos",
+            "etiqueta": "LEUCOCITOS",
+            "type": "text",
+            "format": "number"
+        }
+    }
+}
