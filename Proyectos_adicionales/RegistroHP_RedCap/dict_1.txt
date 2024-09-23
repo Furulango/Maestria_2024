@@ -1,0 +1,419 @@
+data_dictionary = {
+    "record_id": {
+        "label": "Record ID",
+        "type": "text",
+        "validation": "number"
+    },
+    "primer_nombre": {
+        "label": "Nombre del paciente",
+        "type": "text"
+    },
+    "primer_apellido": {
+        "label": "Apellido del paciente",
+        "type": "text"
+    },
+    "expediente_r": {
+        "label": "Expediente",
+        "type": "text"
+    },
+    "fecha_nacimiento": {
+        "label": "Fecha de nacimiento del paciente",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "edad_anos": {
+        "label": "Edad del paciente",
+        "type": "text",
+        "validation": "number"
+    },
+    "genero": {
+        "label": "Género del paciente",
+        "type": "radio",
+        "options": {
+            1: "Hombre",
+            2: "Mujer"
+        }
+    },
+    "institucionppal": {
+        "label": "Institución principal de procedencia",
+        "type": "notes"
+    },
+    "institucion2": {
+        "label": "Segunda institución de procedencia",
+        "type": "notes"
+    },
+    "institucion3": {
+        "label": "Tercera institución de procedencia",
+        "type": "notes"
+    },
+    "estado_civil": {
+        "label": "Estado civil",
+        "type": "dropdown",
+        "options": {
+            0: "Soltero",
+            1: "Casado",
+            2: "Viudo",
+            3: "Unión libre",
+            4: "Separado"
+        }
+    },
+    "ocupacion": {
+        "label": "Ocupación del paciente",
+        "type": "dropdown",
+        "options": {
+            1: "Ama de casa",
+            2: "Estudiante",
+            3: "Sin ocupación",
+            4: "Pensionado",
+            5: "Agricultura",
+            6: "Comerciante",
+            7: "Salud",
+            8: "Estilista",
+            9: "Independiente",
+            10: "Oficios varios",
+            11: "Oficina",
+            12: "Abogado",
+            13: "Minero"
+        }
+    },
+    "regimen_eps": {
+        "label": "Régimen de la EPS",
+        "type": "dropdown",
+        "options": {
+            0: "Subsidiado",
+            1: "Contributivo",
+            2: "Prepagada"
+        }
+    },
+    "eps": {
+        "label": "Empresa prestadora de servicios de salud",
+        "type": "notes"
+    },
+    "procedencia_r": {
+        "label": "Procedencia",
+        "type": "dropdown",
+        "options": {
+            0: "Rural",
+            1: "Urbana"
+        }
+    },
+    "ciudadresidencia": {
+        "label": "Ciudad de residencia",
+        "type": "text",
+        "validation": "alpha_only"
+    },
+    "metrossobrenivelmar": {
+        "label": "Metros sobre el nivel del mar",
+        "type": "text",
+        "validation": "number"
+    },
+    "sociodemograficas_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {
+            0: "Incomplete",
+            1: "Unverified",
+            2: "Complete"
+        }
+    },
+    "inclusion_basededatos": {
+        "label": "Inclusión a base de datos",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "fecha_inicio_sx": {
+        "label": "Fecha de inicio de los síntomas",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "meses_sx_a_dx": {
+        "label": "Meses transcurridos desde los síntomas al diagnóstico",
+        "type": "text"
+    },
+    "ano_delinicio_tto": {
+        "label": "Año de inicio del tratamiento",
+        "type": "text",
+        "validation": "number",
+        "min": 1980
+    },
+    "anosdetratamiento_anos": {
+        "label": "Años de tratamiento",
+        "type": "text",
+        "validation": "number"
+    },
+    "generalidades_hpa_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {
+            0: "Incomplete",
+            1: "Unverified",
+            2: "Complete"
+        }
+    },
+    "fallece": {
+        "label": "Fallece",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "fecha_muerte": {
+        "label": "Fecha de muerte",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "causa_muerte_hp": {
+        "label": "Causa de muerte relacionada a HP",
+        "type": "dropdown",
+        "options": {
+            0: "Otra causa de muerte",
+            1: "Relacionada a hipertensión pulmonar (HTP)"
+        }
+    },
+    "fecha_ultimo_seguimiento": {
+        "label": "Fecha del último seguimiento",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "pronostico_complete": {
+        "label": "Form Status",
+        "type": "dropdown",
+        "options": {
+            0: "Incomplete",
+            1: "Unverified",
+            2: "Complete"
+        }
+    },
+    "presion_pulso_pulmonar": {
+        "label": "Presión de pulso pulmonar",
+        "type": "text"
+    },
+    "dilatacion_cavidades_derech": {
+        "label": "Dilatación cavidades derechas",
+        "type": "calc",
+        "formula": "[diam_basal]>4.1"
+    },
+    "gamagrafia_perf": {
+        "label": "Gammagrafía de perfusión",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "angiotac": {
+        "label": "Angiotomografía computarizada",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "combinacion_1": {
+        "label": "Combinación de medicamentos",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "documento": {
+        "label": "Número de documento de identificación",
+        "type": "text",
+        "validation": "number"
+    },
+    "tipo_documento": {
+        "label": "Tipo de documento",
+        "type": "dropdown",
+        "options": {
+            1: "CC",
+            2: "CE",
+            3: "PS",
+            4: "RC",
+            5: "TI"
+        }
+    },
+    "grupo_hp": {
+        "label": "Grupo de HP al que pertenece el paciente",
+        "type": "radio",
+        "options": {
+            1: "Grupo 1",
+            2: "Grupo 2",
+            3: "Grupo 3",
+            4: "Grupo 4"
+        }
+    },
+    "vivo": {
+        "label": "Vivo",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "tiempo_anos_dx": {
+        "label": "Tiempo en años desde diagnóstico hasta último seguimiento",
+        "type": "calc",
+        "formula": "([fecha_ultimo_seguimiento]) - ([fecha_cate])"
+    },
+    "anodelultimoseguimiento_a": {
+        "label": "Año del último seguimiento",
+        "type": "text",
+        "validation": "number"
+    },
+    "edad_dx": {
+        "label": "Edad al momento de cateterismo diagnóstico",
+        "type": "text",
+        "validation": "number"
+    },
+    "fecha_dx": {
+        "label": "Fecha del diagnóstico de HP (Catererismo)",
+        "type": "calc",
+        "formula": "[fecha_cate]"
+    },
+    "fecha_ultim_seguimiento2": {
+        "label": "Fecha del seguimiento No. 2",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "comorbilidad": {
+        "label": "Comorbilidad",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "cateterismo": {
+        "label": "Cateterismo cardiaco para diagnóstico",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "causa_g1": {
+        "label": "Causa de HP en el grupo 1",
+        "type": "dropdown",
+        "options": {
+            0: "NO",
+            1: "Cardiopatía congénita (CC)",
+            2: "Estenosis arterial pulmonar",
+            3: "Enfermedad de tejido conectivo",
+            4: "VIH",
+            5: "Colangitis biliar primaria",
+            6: "Idiopática",
+            7: "Asociado a anorexigénicos"
+        }
+    },
+    "tipo_cc": {
+        "label": "Tipo de cardiopatía congénita",
+        "type": "dropdown",
+        "options": {
+            0: "NO",
+            1: "CIA - Ostium Primum",
+            2: "CIA - Ostium Secundum",
+            3: "CIA - Seno Venoso",
+            4: "Ductus Arterioso Persistente",
+            5: "CIV - Comunicación Interventricular",
+            6: "Transposición de Grandes Vasos"
+        }
+    },
+    "cardiopatia_congenita": {
+        "label": "Cardiopatía congénita",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "cirugia_cc_dxhtp": {
+        "label": "Cirugías para la cardiopatía congénita",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "cia": {
+        "label": "Comunicación interauricular",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "civ": {
+        "label": "Comunicación interventricular",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "ductusartp": {
+        "label": "Ductus Arterioso Persistente",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "canalav": {
+        "label": "Canal Atrioventricular",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "fibrilacion_auricular": {
+        "label": "Fibrilación Auricular",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "eisenmenger": {
+        "label": "Síndrome de Eisenmenger",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "enf_coronaria": {
+        "label": "Enfermedad coronaria",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "falla_cardiaca": {
+        "label": "Falla cardíaca",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "tvp": {
+        "label": "Trombosis venosa profunda",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    },
+    "tep": {
+        "label": "Tromboembolismo pulmonar",
+        "type": "yesno",
+        "options": {
+            1: "Sí",
+            0: "No"
+        }
+    }
+}

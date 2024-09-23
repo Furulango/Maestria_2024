@@ -1,0 +1,252 @@
+data_dictionary_part_2 = {
+    "ecv": {
+        "label": "Enfermedad cardiovascular",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "htasistemica": {
+        "label": "Hipertensión arterial sistémica",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "dm": {
+        "label": "Diabetes Mellitus",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "dislipidemia": {
+        "label": "Dislipidemia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "epid": {
+        "label": "Enfermedad Pulmonar Intersticial Difusa",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "etc": {
+        "label": "Enfermedades Tejido Conectivo",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "lupuses": {
+        "label": "Lupus Eritematoso Sistémico",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "esclerosissist": {
+        "label": "Esclerosis Sistémica",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "sjogren": {
+        "label": "Síndrome de Sjögren",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "atritisreum": {
+        "label": "Artritis Reumatoide",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "esclerodermia": {
+        "label": "Esclerodermia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "sindantifosf_lip": {
+        "label": "Síndrome antifosfolipídico",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "colangitis_biliar_primaria": {
+        "label": "Colangitis Biliar Primaria",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "osler_weber_rendu": {
+        "label": "Osler Weber Rendu",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "hepatitis_autoinmune": {
+        "label": "Hepatitis autoinmune",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "enfmixtatejconectivo": {
+        "label": "Enfermedad Mixta del Tejido Conectivo",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "tromboembolia": {
+        "label": "Tromboembolia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "mutgenprotromb": {
+        "label": "Mutación del gen de protrombina",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "defantitrombiii": {
+        "label": "Deficiencia de antitrombina III",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "defactorleiden": {
+        "label": "Deficiencia factor V Leiden",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "defprots": {
+        "label": "Deficiencia de la proteína S",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "defprotc": {
+        "label": "Deficiencia de la proteína C",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "cancer": {
+        "label": "Cáncer",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "vih_positivofecha": {
+        "label": "Fecha de prueba VIH positivo",
+        "type": "text",
+        "validation": "date_dmy"
+    },
+    "vih": {
+        "label": "VIH",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "epoc": {
+        "label": "Enfermedad Pulmonar Obstructiva Crónica",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "erc": {
+        "label": "Enfermedad Renal Crónica",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "asma": {
+        "label": "Asma",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "saos": {
+        "label": "SAOS",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "tuberculosis": {
+        "label": "Tuberculosis",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "infarto_miocardio": {
+        "label": "Infarto miocardio",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "insuficiencia_cardiaca": {
+        "label": "Insuficiencia cardiaca",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "asplenia": {
+        "label": "Asplenia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "enfermedad_hepatica": {
+        "label": "Enfermedad hepática",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "enfermedad_neurologica": {
+        "label": "Enfermedad neurológica",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "anemia": {
+        "label": "Anemia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "gastritis_erge": {
+        "label": "Gastritis o ERGE",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "trastornopsiquiatrico": {
+        "label": "Trastorno psiquiátrico",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "demencia": {
+        "label": "Demencia",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "disnea": {
+        "label": "Disnea",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "dolor_toracico": {
+        "label": "Dolor torácico",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "sincope": {
+        "label": "Síncope",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "rinitis": {
+        "label": "Rinitis",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "sinusitis": {
+        "label": "Sinusitis",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "comorbilidades": {
+        "label": "Comorbilidades",
+        "type": "descriptive"
+    },
+    "comorbi_seg": {
+        "label": "Comorbilidad del paciente en el seguimiento",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    },
+    "dx_comorbilidad_seg": {
+        "label": "Diagnóstico de comorbilidad en el seguimiento",
+        "type": "checkbox",
+        "options": {
+            1: "Fibrilación auricular",
+            2: "Depresión",
+            3: "TEP",
+            4: "Taquicardia supraventricular",
+            5: "EPOC",
+            6: "Trombosis de la porta",
+            7: "SAF (Síndrome antifosfolipídico)",
+            8: "Ductus arterioso persistente",
+            9: "Trombosis Venosa Profunda",
+            10: "Otros"
+        }
+    },
+    "sintomas_seg": {
+        "label": "Síntomas presentes en el seguimiento",
+        "type": "yesno",
+        "options": {1: "Sí", 0: "No"}
+    }
+}
