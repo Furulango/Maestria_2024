@@ -1,4 +1,5 @@
 import numpy as np
+import metodo_potencia_w_inversa as mp
 
 def metodo_potencia_desplazada(A, x, sigma, tol=1e-5, max_iter=1000):
     A_shifted = A - sigma * np.eye(A.shape[0])
@@ -22,13 +23,21 @@ def metodo_potencia_desplazada(A, x, sigma, tol=1e-5, max_iter=1000):
     
     return eigenvalor_desplazado, x
 
-A = np.array([[0, 11, -5],
-              [-2, 17, -7],
-              [-4, 26, -10]])
+A = np.array([[4, 1, 2, 0],
+              [1, 3, 0, 1],
+              [2, 0, 5, 1],
+              [0, 1, 1, 2]])
 
-x_inicial = np.random.rand(3)
-sigma = 5
+x_inicial = np.random.rand(A.shape[0])
+eigenvalormax, eigenvectormax = mp.metodo_potencia(A,x_inicial)
+x_inicial = np.random.rand(A.shape[0])
+eigenvalormin, eigenvectormin = mp.metodo_potencia_inversa(A,x_inicial)
+
+sigma = eigenvalormax - eigenvalormin
+
+x_inicial = np.random.rand(A.shape[0])
 
 eigenvalor, eigenvector = metodo_potencia_desplazada(A, x_inicial, sigma)
 
+print(eigenvalormax - eigenvalormin)
 print("Eigenvalor desplazado:", eigenvalor)
